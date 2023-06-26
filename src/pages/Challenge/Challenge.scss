@@ -1,0 +1,62 @@
+.custom-resizer{
+  background-color: green;
+  width: 20px;
+  border: 1px solid red;
+}
+.challenge-page{
+  display: flex;
+  .challenge-section-xs{
+    display: none;
+  }
+  .challenge-section{
+    border: 1px solid #0D6EFD;
+    background-color: white;
+    overflow: scroll;
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  }
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .challenge-section::-webkit-scrollbar {
+    display: none;
+  }
+  @media (max-width: 460px) {
+    display: block;
+    .challenge-section{
+      display: none;
+    }
+    .challenge-section-xs{
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.cursor-pointer{
+  &:hover{
+    cursor: pointer;
+  }
+}
+.challenge-comment-section{
+  margin: 1rem;
+}
+.challenge-comment-container{
+  border-radius: 5px;
+  background-color: #97D3E3;
+  padding: 0.5rem;
+}
+.challenge-reply-container{
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-left: 3rem;
+  background-color: #F7F7F7;
+}
+.show-reply{
+  &:hover{
+    cursor: pointer;
+  }
+}
+.challenge-editor{
+  margin-top: 0.5rem;
+  .challenge-editor-top{
+    margin-left: 30px;
+  }
+}

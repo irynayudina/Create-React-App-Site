@@ -1,0 +1,80 @@
+.user-challenges{
+    margin: 1rem;
+    .user-header-challenges{
+        text-align: center;
+    }
+    .challenges-menu{
+        display: flex;
+        gap: 0.5rem;
+        justify-content: space-between;
+        select{
+            width: auto;
+            flex-grow: 2;
+        }
+        .group-bottom{
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            flex-grow: 2;
+            .custom-form-check{
+                display: flex;
+                align-items: baseline;
+                align-content: baseline;
+            }
+        }
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 576px) {
+        margin: 0;
+        margin-top: 0.5rem;
+    }
+}
+.create-cchallenge-form{
+    h5{
+        text-align: center;
+    }
+    padding: 1rem;
+    .form-challenge-create{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        select{
+            width: 100%;
+        }
+        .test-cases-forming{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media (max-width: 400px) {
+                flex-direction: column;
+            }
+            @media (min-width: 400px) {
+                .test-description, .test-value{
+                    width: calc((100% - 106px - 1.5rem)/2);
+                }
+            }
+        }
+        .horizontal-tags{
+            max-width: 100%;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+    }
+    width: 60vw;
+    max-height: calc(100vh - 40px);
+    @media (max-width: 567px) {
+        width: calc(100vw - 4rem);
+        padding: 0;
+        max-height: calc(100vh - 100px);
+    }
+    overflow-x:visible;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */    
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.create-cchallenge-form::-webkit-scrollbar {
+  display: none;
+}

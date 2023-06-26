@@ -1,0 +1,36 @@
+.user-settings{
+    margin: 1rem;
+    .title-settings{
+        text-align: center;
+    }
+    .main-settings{
+        display: flex;
+        flex-direction: column;
+        // gap: 1rem;
+        border-radius: 5px;
+        background-color: white;
+        .top-subpages{
+            border-radius: 5px;
+            padding: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            .subpage-link{
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .active-subpage{
+                font-weight: 500;
+            }
+        }
+        .display-sidepage{
+            padding: 0.5rem;
+            width: 100%;
+        }
+    }
+    @media (max-width: 576px) {
+        margin: 0;
+        margin-top: 0.5rem;
+    }
+}

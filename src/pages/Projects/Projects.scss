@@ -1,0 +1,107 @@
+.projects-container{
+    margin: 1rem;
+    .title-projects{
+        text-align: center;
+    }
+    .topsection-projects{
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        input.form-control{
+            width: 320px;
+        }
+    }
+    .languages-select{
+        text-align: center;
+    }
+    .languages{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+        background-color: whitesmoke;
+        margin-top: 0.5rem;
+        border-radius: 5px;
+        padding: 0.5rem;
+    }
+    .projects-display-open{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.5rem;
+        .project-item{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: space-between;
+            width: 200px;
+            min-height: 200px;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            padding: 0.5rem;
+            @media (max-width:480px) {
+                width: 100%;
+            }
+            .project-name{
+                word-wrap: break-word;
+                font-size: 24px;
+                text-align: center;
+            }
+            // &:hover{
+            //     cursor: default;
+            //     .open-file-button{
+            //         display: block;
+            //     }
+            // }
+            .project-language{
+                text-align: center;
+                font-size: 28px;
+            }
+            .numbers{
+                display: flex;
+                column-gap: 0.5rem;
+                justify-content: space-between;
+                .likes svg{
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .actions{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            .tags{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            .numbers{
+                display: flex;
+                column-gap: 0.5rem;
+                justify-content: space-between;
+            }
+            .collaborators{
+                text-align: center;
+                div{
+                    text-align: left;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .rename{
+                display: flex;
+                align-items: center;
+            }
+            .bottom-options{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+.loader-container-list-item{
+    min-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}

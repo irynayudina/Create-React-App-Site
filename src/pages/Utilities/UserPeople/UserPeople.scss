@@ -1,0 +1,88 @@
+.peopleContainer{
+    margin: 1rem;
+    .title-people{
+        text-align: center;
+    }
+    .people-topsection{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        select{
+            max-width: 320px;
+        }
+    }
+    .people-display{
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .person-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            padding: 0.5rem;
+            width: 300px;
+            max-width: calc(100%);
+            @media (max-width: 1010px) {
+                width: 100%;
+            }
+            .person-info-group{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                .person-img{
+                    width: 5rem;
+                    height: 5rem;
+                    background-image: url('blank-profile-picture.png');
+                    background-size: cover;
+                    border-radius: 50%;
+                    display: block;
+                }
+                .person-name{
+                    max-width: calc(300px - 2rem - 31px - 80px);
+                    word-wrap: break-word;
+                }
+                .bage-role{
+                    float: left;
+                }
+                .person-role{
+                    font-size: 14px;
+                    margin-top: 0;
+                }
+                a{
+                    text-decoration: none !important;
+                    .person-name{
+                        color: #212529;
+                    }
+                }
+            }
+            @media (max-width: 1010px) {
+                // flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                .person-info-group{
+                    justify-content: flex-start;
+                    .person-img{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                    .person-name{
+                        max-width: 100%;
+                        max-width: calc(100vw - 6rem - 92px);
+                    }
+                    flex-grow: 3;
+                }
+            }
+            @media (max-width: 420px) {
+                justify-content: center;
+            }
+        }
+    }
+   
+}

@@ -1,0 +1,36 @@
+.privacy-settings{
+    .text-settings{
+        border:  1px solid red;
+        border-color: #0D6EFD;
+        // border-top: none;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-auto-columns: 1fr;
+        gap: 0.5rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+        ". .";
+        @media (max-width: 1100px) {
+            display: block;
+        }
+        .controls-setting, .description-setting{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            select{
+                flex-shrink: 4;
+                min-width: 120px !important;
+            }
+            margin-top: 0.5rem;
+        }
+        .description-setting{
+            justify-content: flex-start;
+            // span{
+            //     padding-left: 12px;
+            // }
+        }
+    }
+}

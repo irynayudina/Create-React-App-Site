@@ -1,0 +1,82 @@
+.challenges-container{
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    @media (max-width: 992px) {
+        width: 100%;
+        margin: 0;
+    }
+    .challenge-tab-layout{
+        @media (max-width: 576px) {
+            .challenges-left, .challenges-right, .challenges-center{
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            .challenges-left{
+                border-bottom: 1px solid #0889E2;
+            }
+        }
+    }
+    .challenges-left, .challenges-right, .challenges-center{
+        padding:0;
+        border-radius: 0.5rem;
+        border: 1px solid #4285F4;//#6C757D;
+        // background: rgb(132, 195, 236);//rgb(105, 182, 233)
+        @media (max-width: 992px) {
+            border-radius: 0;
+        }
+    }
+    .challenges-difficulty, .challenges-topics, .challenges-list, .challenges-top-users{
+        border: 1px solid #4285F4;//#6C757D;
+        background: rgb(202, 226, 242);//rgb(105, 182, 233)
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        @media (max-width: 992px) {
+            border-radius: 0;
+            // border: none;
+        }
+        @media (max-width: 576px) {
+            border-radius: 0;
+            border: none;
+        }
+    }
+    @media (max-width: 576px) {
+        .challenges-center{
+            border-bottom: none;
+        }
+        .challenges-difficulty{
+            border-bottom: 1px solid #4285F4;
+        }
+    }
+    .challenges-difficulty{
+        svg{
+            color: rgb(8,137,226);
+        }
+    }
+
+    .form-check-input{
+        cursor: pointer;
+    }
+
+    .challenges-left{
+        border-radius: 0;
+        border: none;
+        margin-top: -1rem;
+        margin-left: -1rem;
+        margin-right: 1rem;
+        @media (max-width: 992px) {
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    .challenges-difficulty, .challenges-topics{
+        border-radius: 0;
+        padding: 0.5rem;
+        background: whitesmoke;
+        // background: none;
+    }
+    .challenges-right{
+        background: whitesmoke;
+    }
+
+}

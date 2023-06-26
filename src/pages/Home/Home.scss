@@ -1,0 +1,47 @@
+.home-container{
+    padding-top: 5vw;
+}
+.landing-logo-animation{
+    width: 736px;
+    // height: 300px;
+    margin: auto;
+    // border: 1px solid rgb(8,137,226);//rgb(228, 205, 205);
+    text-align: center;
+    h3 {
+        font-size: 72px;
+        font-weight: 700;
+        background: rgb(8,137,226);
+        background: linear-gradient(90deg, rgba(8,137,226,1) 0%, rgba(255,130,231,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .originalStyle{
+        all: initial;
+        font-size: inherit;
+      }
+}
+@media (max-width: 750px) {
+  .landing-logo-animation{
+    width: 100vw;
+    // height: 300px;
+    h3{
+      font-size: 9vw;
+      font-weight: 700;
+    }
+  }
+}
+.landing-headers{
+  h1, h3, svg{
+    background: rgb(8,137,226);
+    background: linear-gradient(90deg, rgba(8,137,226,1) 0%, rgba(255,130,231,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  svg{
+    color: rgba(8,137,226,1);
+  }
+}
+  
+  

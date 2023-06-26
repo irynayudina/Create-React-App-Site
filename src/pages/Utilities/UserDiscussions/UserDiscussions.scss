@@ -1,0 +1,35 @@
+.class-discussions{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .title{
+        text-align: center;
+    }
+    .discussion-item{
+        background-color: whitesmoke;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        .topsection{
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            .discussion-title{
+                font-weight: 500;
+            }
+            .discussion-date{
+                font-size: 14px;
+            }
+        }
+        .numbers{
+            font-size: 14px;
+            display: flex;
+            justify-content: end;
+            gap: 0.5rem;
+            .discussion-comments, .discussion-likes{
+                display: flex;
+                align-items: baseline;
+            }
+        }
+    }
+}

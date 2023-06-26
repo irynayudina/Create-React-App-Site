@@ -1,0 +1,38 @@
+.discussion-page{
+    padding: 1rem;
+    background-color: whitesmoke;
+    .reply-button, .show-comments{
+        &:hover{
+            cursor: pointer;
+            color: #4285F4;
+        }
+    }
+    .discussion-footer{
+        // margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        max-width: 350px;
+        @media (min-width: 1400px) {
+            max-width: 25vw;
+        }
+    }
+}
+.comment-section{
+    margin-top: 1rem;
+    background-color: whitesmoke;
+}
+.reply-form{
+    padding-top: 1rem;
+    form{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 700px;
+        @media (min-width: 1400px) {
+            max-width: 50vw;
+        }
+    }
+}

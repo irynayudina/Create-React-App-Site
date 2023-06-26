@@ -1,0 +1,20 @@
+.top-collab-nav{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    .people-collab, .people-active-now{
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        span{
+            background-color: white;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 5px;
+        }
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,101 @@
+.discussions{
+    margin: 1rem;
+    // margin-top: 20px;
+    .discussions-topsection{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        .select-discussion-topic{
+            width: 300px;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .sesrch-discussion{
+            display: flex;
+        }
+    }
+    .discussion-item{
+        background-color: whitesmoke;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        .down-section, .top-section{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .tags{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                // align-items: flex-start;
+                align-items: baseline;
+            }
+            .response-statistics{
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                // .discussion-likes {
+                //     display: flex;
+                //     align-items: baseline;
+                //     gap: 0.5rem;
+                //     div{
+                //         display: flex;
+                //         align-items: center;
+                //         // gap: 0.5rem;
+                //     }
+                // }
+                // .discussion-answers{}
+            }
+        }
+        .metadata-discussions{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            column-gap: 0.5rem;
+            max-width: 15rem;
+            text-align: right;
+            font-size: 14px;
+        }
+    }
+}
+.add-new-discussion-form{
+    h5{
+        text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    .form-discussion-create{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .horizontal-tags{
+            max-width: 100%;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+    }
+    width: 60vw;
+    max-height: calc(100vh - 40px);
+    overflow-y: scroll;
+     @media (max-width: 567px) {
+        width: calc(100vw - 4rem);
+        padding: 0;
+        max-height: calc(100vh - 100px);
+    }
+    // overflow-x:visible;
+    // overflow-y: scroll;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.add-new-discussion-form::-webkit-scrollbar {
+  display: none;
+}
+.black-link{
+    color: #212529 !important;
+}

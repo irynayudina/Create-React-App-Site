@@ -1,0 +1,27 @@
+.percision-contoll{
+    margin: 1rem;
+}
+.user-charts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .charts{
+        padding-top: 1rem;
+        background-color: rgba(255, 255, 255, 0.584);
+    }
+    .period-selector{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        gap: 0.5rem;
+        .form-selector-times{
+            min-width: 250px;
+        }
+        select{
+            width: auto;
+        }
+    }
+}

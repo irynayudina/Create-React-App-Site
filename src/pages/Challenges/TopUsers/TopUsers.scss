@@ -1,0 +1,9 @@
+.top-users{
+    padding: 0.5rem;
+    .topic-select-users{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+}

@@ -1,0 +1,17 @@
+.pannel-resize.collab{
+    min-height: 70vh;
+    height: auto;
+    margin-bottom: 0;
+    border: none;
+    .two-main-items{
+        border: none;
+        .right-item{
+        margin-right: 0 !important;
+    }
+    }
+}
+@media (max-width: 750px){
+    .pannel-resize.collab{
+        padding: 0;
+    }
+}

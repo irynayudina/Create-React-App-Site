@@ -1,0 +1,127 @@
+.container-grid {  
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2fr 5fr 5fr;
+  }
+  .elem{
+    border-top: 1px solid #212529;
+    &:nth-child(2){
+      overflow: hidden;
+      border-bottom: 10px solid #212529 !important;
+    }    
+    &:nth-child(3){
+      margin: 1rem 1rem 0 0 ;
+    } 
+  }
+  .elem.lighttheme{
+    border-top: 1px solid #4285F4;
+  }
+  .result{
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    height: 546px;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    &:hover{
+      overflow-y: scroll;
+    }
+  }
+  .botInp{
+    margin-top: 0.5rem;
+  }
+.elem1{
+  border: none;
+}
+.result.darktheme{
+  background-color: #191A16;
+  color: white;
+}
+.inp.darktheme{
+  background-color: #191A16;
+  color: white;
+}
+.select.darktheme{
+  background-color: #191A16;
+  color: white;
+}
+.text.darktheme{
+  background-color: #191A16;
+  color: white;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.btn-editor {
+  width: calc(100% );
+  // margin-left: 0.5rem;
+  // margin-right: 0.5rem;
+}
+.btn-editor-sm{
+  width: calc(100% - 1rem);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  font-size: 18px;
+}
+.btn-editor-lg{
+  width: calc(100% - 1rem);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+.btn-editor-lg.btn.btn-dark{
+  background-color: #191A16;
+  &:hover{
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+  }
+}
+.error-line {
+  background-color: #f79f9fa9 !important;
+}
+.error-line-dark {
+  background-color: #ff1f1fa2 !important;
+  // background-color: #e315157a !important;
+}
+.inp{
+  min-width: 120px;
+  margin-left: 0.5rem;
+}
+.editor-input-up.lighttheme{
+  max-width: calc(100% - 124px - 0.5rem);
+}
+.editor-input-up.darktheme{
+  max-width: calc(100% - 124px - 0.5rem - 6px);
+}
+.editor-input-down.lighttheme{
+  max-width: calc(100% - 120px - 0.5rem);
+}
+.editor-input-down.darktheme{
+  max-width: calc(100% - 120px - 0.5rem - 6px);
+}
+.result-sm{
+  .inp{
+    min-width: calc(100% - 1rem);
+  }
+}
+@media (max-width: 306px) {
+  .inp{
+    min-width: calc(100% - 1rem);
+  }
+}
+.project-info-secion{
+  background-color: whitesmoke;
+  padding: 1rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  div{
+    display: flex;
+    justify-content: space-between;
+  }
+  .author{
+    text-align: right;
+  }
+}

@@ -1,0 +1,59 @@
+.challenge-item{
+    background: rgb(105, 182, 233);
+    background: whitesmoke;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    p{
+        margin: 0;
+    }
+    .metadata-challenge{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        column-gap: 0.5rem;
+        max-width: 15rem;
+        font-size: 14px;
+        text-align: right;
+        // flex-direction: column;
+    }
+    .challenge-topsection{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .topic-name{
+            font-size: 14px;
+        }
+    }
+}
+
+.challenge-list-top-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 0.5rem;
+        .select-discussion-topic{
+            width: 300px;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .search-challenge{
+            display: flex;
+        }
+        @media (max-width: 576px) {
+            color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            .sort-challenges{
+                width: 100%;
+            }
+            .search-challenge{
+                width: calc(100%);
+            }
+        }
+    }
+
