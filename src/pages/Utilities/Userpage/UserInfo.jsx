@@ -13,7 +13,8 @@ const UserInfo = ({ isPublic }) => {
   const loadInfoFollow = async () => {
     try {
       const userInfoResponse = await axios.get(
-        `https://codeeditorbackend-production.up.railway.app/api/users/followingFollowers`
+        `https://codeeditorbackend-production.up.railway.app/api/users/followingFollowers`,
+        { withCredentials: true }
       );
       setMainUser(userInfoResponse.data);
       console.log(userInfoResponse.data);
