@@ -53,7 +53,7 @@ const UserPeople = () => {
   const loadPeopleOfUSer = async () => {
     try {
       const responsePeople = await axios.get(
-        `https://codeeditorbackend-production.up.railway.app/api//users/people?user_id=${userId}`,
+        `https://codeeditorbackend-production.up.railway.app/api/users/people?user_id=${userId}`,
         { withCredentials: true }
       );
       setPeopleArray(responsePeople?.data);
