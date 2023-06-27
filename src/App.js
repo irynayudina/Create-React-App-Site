@@ -31,7 +31,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import PrivateRoute from './private/PrivateRoute';
 
 function App() {
-  const [theme, setTheme] = useState("darktheme")
+  const [theme, setTheme] = useState("lighttheme");
   const [breakpoint, setBreakpoint] = useState("xxl")
   const [editorBreakpoint, setEditorBreakpoint] = useState(1400)
   useEffect(() => {
