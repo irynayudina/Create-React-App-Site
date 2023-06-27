@@ -100,7 +100,8 @@ const SideBar = (props) => {
         "https://codeeditorbackend-production.up.railway.app/api/projects/delete",
         {
           projectId: props.projectId,
-        }
+        },
+        { withCredentials: true }
       );
       if (projectUpdated?.data) {
         console.log(projectUpdated.data);
@@ -122,7 +123,8 @@ const SideBar = (props) => {
         {
           projectId: props.projectId,
           projectName: renameStr,
-        }
+        },
+        { withCredentials: true }
       );
       if (projectUpdated?.data) {
         console.log(projectUpdated.data);

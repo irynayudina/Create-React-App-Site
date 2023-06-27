@@ -42,7 +42,8 @@ const SaveFile = (props) => {
           projectName: name,
           codeFile: props.code,
           language: props.language,
-        }
+        },
+        { withCredentials: true }
       );
       if (project?.data) {
         console.log(project.data);
@@ -66,7 +67,8 @@ const SaveFile = (props) => {
           projectId: props.projectId,
           codeFile: props.code,
           language: props.language,
-        }
+        },
+        { withCredentials: true }
       );
       if (project?.data) {
         console.log(project.data);

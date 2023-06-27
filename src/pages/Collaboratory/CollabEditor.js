@@ -44,7 +44,8 @@ export default function CollabEditor() {
   const getCollabById = async () => {
     try {
       const gotCollaboration = await axios.get(
-        `https://codeeditorbackend-production.up.railway.app/api/collab/id?collab_id=${documentId}`
+        `https://codeeditorbackend-production.up.railway.app/api/collab/id?collab_id=${documentId}`,
+        { withCredentials: true }
       );
       if (gotCollaboration?.data) {
         console.log(gotCollaboration.data);
@@ -65,7 +66,8 @@ export default function CollabEditor() {
             {
               collabId: documentId,
               ownerId: userInfo._id,
-            }
+            },
+            { withCredentials: true }
           );
           console.log(newCollab)
           if (newCollab?.data) {
@@ -85,7 +87,8 @@ export default function CollabEditor() {
           {
             collab_id: documentId,
             associatedProject_id: associatedProject_id,
-          }
+          },
+          { withCredentials: true }
         );
         if (newCollab?.data) {
           toast.success("Created a new collaboration");
@@ -94,7 +97,8 @@ export default function CollabEditor() {
           setOwners(newCollab?.data?.owners)
           //get text of a project and pass it to quill
           const projectData = await axios.get(
-            `https://codeeditorbackend-production.up.railway.app/api/projects/id?id=${associatedProject_id}`
+            `https://codeeditorbackend-production.up.railway.app/api/projects/id?id=${associatedProject_id}`,
+            { withCredentials: true }
           );
           if (projectData?.data) {
             console.log(projectData.data);
@@ -138,7 +142,8 @@ export default function CollabEditor() {
           {
             projectId: associatedProject,
             codeFile: plainText,
-          }
+          },
+          { withCredentials: true }
         );
         if (project?.data) {
           console.log(project.data);

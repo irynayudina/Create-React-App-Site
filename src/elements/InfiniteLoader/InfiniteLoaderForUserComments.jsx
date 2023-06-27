@@ -23,7 +23,8 @@ function useLoadItems(filerObj) {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://codeeditorbackend-production.up.railway.app/api/comments/ofUser?page=${page}${filterQuery}`
+          `https://codeeditorbackend-production.up.railway.app/api/comments/ofUser?page=${page}${filterQuery}`,
+          { withCredentials: true }
         );
           console.log(response)
         setItems((prevItems) => {

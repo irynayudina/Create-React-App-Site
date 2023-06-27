@@ -72,7 +72,8 @@ const Editor = (props) => {
   const getCollab = async () => {
     try {
       const gotCollaboration = await axios.get(
-        `https://codeeditorbackend-production.up.railway.app/api/collab/projectId?associatedProject_id=${projectId}`
+        `https://codeeditorbackend-production.up.railway.app/api/collab/projectId?associatedProject_id=${projectId}`,
+        { withCredentials: true }
       );
       console.log(gotCollaboration);
       if (gotCollaboration?.data?.collabId) {
@@ -161,6 +162,7 @@ const Editor = (props) => {
           headers: {
             "Content-Type": "application/json",
           },
+          withCredentials: true 
         }
       )
       .then((response) => {
@@ -346,7 +348,8 @@ const Editor = (props) => {
   const getProjectData = async () => {
     try {
       const projectData = await axios.get(
-        `https://codeeditorbackend-production.up.railway.app/api/projects/id?id=${projectId}`
+        `https://codeeditorbackend-production.up.railway.app/api/projects/id?id=${projectId}`,
+        { withCredentials: true }
       );
       if (projectData?.data) {
         console.log(projectData.data);

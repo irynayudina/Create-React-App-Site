@@ -18,7 +18,8 @@ const ReplyDiscussion = ({ discussionId, handleReply }) => {
         {
           text: commentText,
           parentDiscussion: discussionId,
-        }
+        },
+        { withCredentials: true }
       );
       if (comment?.data) {
         // setCommentNew(comment.data);
@@ -27,7 +28,8 @@ const ReplyDiscussion = ({ discussionId, handleReply }) => {
           {
             discussionId,
             commentId: comment.data?._id,
-          }
+          },
+          { withCredentials: true }
         );
         handleReply(comment.data);
       }

@@ -42,7 +42,8 @@ const CreateDiscussionForm = () => {
           title: title,
           text: text,
           tags: tags,
-        }
+        },
+        { withCredentials: true }
       );
       if (discussion?.data) {
         setDiscussionData(discussion.data);

@@ -18,7 +18,8 @@ function useLoadItems(filerObj) {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://codeeditorbackend-production.up.railway.app/api/comments/ofDiscussion?discussionId=${filerObj?._id}&page=${page}`
+          `https://codeeditorbackend-production.up.railway.app/api/comments/ofDiscussion?discussionId=${filerObj?._id}&page=${page}`,
+          { withCredentials: true }
         );
         setItems((prevItems) => {
           // Filter out duplicate items

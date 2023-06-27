@@ -86,7 +86,8 @@ const Project = ({
         {
           projectId: project._id,
           projectName: renameStr,
-        }
+        },
+        { withCredentials: true }
       );
       if (projectUpdated?.data) {
         console.log(projectUpdated.data);

@@ -14,7 +14,8 @@ const PublicUserInfo = ({ userId, me }) => {
   const loadInfoFollow = async () => {
     try {
         const userInfoResponse = await axios.get(
-          `https://codeeditorbackend-production.up.railway.app/api/users/followingFollowers`
+          `https://codeeditorbackend-production.up.railway.app/api/users/followingFollowers`,
+          { withCredentials: true }
         );
       setMainUser(userInfoResponse.data);
       console.log(userInfoResponse.data);
@@ -31,7 +32,8 @@ const PublicUserInfo = ({ userId, me }) => {
     const loadUserInfo = async () => {
       try {
         const userInfoResponse = await axios.get(
-          `https://codeeditorbackend-production.up.railway.app/api/users/profile?userId=${userId}`
+          `https://codeeditorbackend-production.up.railway.app/api/users/profile?userId=${userId}`,
+          { withCredentials: true }
         );
         setUserInfo(userInfoResponse.data);
       } catch (err) {
@@ -48,7 +50,8 @@ const PublicUserInfo = ({ userId, me }) => {
                 `https://codeeditorbackend-production.up.railway.app/api/users/follow`,
                 {
                   userId: userInfo?._id,
-                }
+                },
+                { withCredentials: true }
               );
                 if (response?.data?.updatedUser) {
                     me = response?.data?.updatedUser;
@@ -73,7 +76,8 @@ const PublicUserInfo = ({ userId, me }) => {
                 `https://codeeditorbackend-production.up.railway.app/api/users/unfollow`,
                 {
                   userId: userInfo?._id,
-                }
+                },
+                { withCredentials: true }
               );
                 if (response?.data?.updatedUser) {
                     me = response?.data?.updatedUser;

@@ -28,7 +28,8 @@ function useLoadItems(userId, wasChanged) {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://codeeditorbackend-production.up.railway.app/api/projects?page=${page}&authorId=${userId}`
+          `https://codeeditorbackend-production.up.railway.app/api/projects?page=${page}&authorId=${userId}`,
+          { withCredentials: true }
         );
         setItems((prevItems) => {
           // Filter out duplicate items
@@ -93,7 +94,8 @@ const UserProjects = (props) => {
         "https://codeeditorbackend-production.up.railway.app/api/projects/delete",
         {
           projectId: project_id,
-        }
+        },
+        { withCredentials: true }
       );
       if (projectUpdated?.data) {
         console.log(projectUpdated.data);
