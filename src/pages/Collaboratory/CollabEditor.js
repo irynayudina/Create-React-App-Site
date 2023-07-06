@@ -314,7 +314,7 @@ export default function CollabEditor() {
             {owners?.map((user, index) => (
               <Link
                 key={index}
-                to={`/public/user/${user?.usrId}#projects`}
+                to={`/public/user/${user?._id}#projects`}
                 className="text-decoration-none black-link"
               >
                 <span>{user?.name}</span>
