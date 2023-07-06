@@ -168,7 +168,7 @@ export default function CollabEditor() {
 
   useEffect(() => {
   const userInfoPass = { _id: userInfo._id };
-    const s = io("codeeditorsocketserver-production.up.railway.app", {
+    const s = io("https://codeeditorsocketserver-production.up.railway.app", {
       query: { userInfo: JSON.stringify(userInfoPass) },
     });
     setSocket(s);
