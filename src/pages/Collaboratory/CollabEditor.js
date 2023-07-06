@@ -294,6 +294,9 @@ export default function CollabEditor() {
     q.setText("Loading...");
     setQuill(q);
   }, []);
+
+useEffect(()=>{console.log(owners)}, [owners]);
+  
   return (
     <div>
       <div className="top-collab-nav">
