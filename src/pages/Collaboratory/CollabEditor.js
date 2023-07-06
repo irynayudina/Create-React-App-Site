@@ -170,6 +170,7 @@ export default function CollabEditor() {
   const userInfoPass = { _id: userInfo._id };
     const s = io("https://codeeditorsocketserver-production.up.railway.app", {
       query: { userInfo: JSON.stringify(userInfoPass) },
+      extraHeaders: {"Access-Control-Allow-Origin", "*"}
     });
     setSocket(s);
 
